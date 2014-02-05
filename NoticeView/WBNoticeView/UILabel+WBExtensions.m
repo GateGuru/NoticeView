@@ -41,7 +41,7 @@
             
             NSRange rTest = NSMakeRange(rRemainingText.location, rWhitespace.location - rRemainingText.location);
             NSString *textTest = [text substringWithRange:rTest];
-            CGSize sizeTest = [textTest sizeWithFont:font forWidth:1024.0 lineBreakMode:UILineBreakModeWordWrap];
+            CGSize sizeTest = [textTest sizeWithFont:font forWidth:1024.0 lineBreakMode:NSLineBreakByWordWrapping];
             
             if (sizeTest.width > maximumWidth) {
                 [lines addObject:[currentLine stringByTrimmingCharactersInSet:wordSeparators]];
